@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="stylesheet/style.css">
+    <title>Index</title>
+</head>
+<body>
+    <h1>All the animals</h1>
+        <% for (var x in all_animals) { %>
+            <p>Id: <%= all_animals[x].id %></p>
+            <p>By Name: <%= all_animals[x].name %> ,Created Time: <%= all_animals[x].createdAt %></p>
+            <a href="/animals/<%= all_animals[x].id %>">Show</a>
+            <a href="/animals/edit/<%= all_animals[x].id %>">Edit</a>
+            <a href="/animals/destroy/<%= all_animals[x].id %>">Delete</a>
+            <hr>
+        <% } %>
+</body>
+</html>
+<!-- <a href="/users/{{ user['id'] }}/edit">Edit</a> -->
